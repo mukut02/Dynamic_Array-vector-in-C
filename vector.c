@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
+
 #define cout printf
 #define cin scanf
 
@@ -28,7 +29,7 @@ void push_back(vector* v,int val){
 
 void insert(vector* v,int pos,int val){
     if(pos<0 || pos>v->size){
-        printf("Invalid insertion!!\n");
+        cout("Invalid insertion!!\n");
         return;
     }
     if(v->size == v->capacity) resize(v);
@@ -41,7 +42,7 @@ void insert(vector* v,int pos,int val){
 
 void delete(vector* v,int pos){
     if(pos<0 || pos>v->size){
-        printf("Invalid deletion!!\n");
+        cout("Invalid deletion!!\n");
         return;
     }
     
@@ -52,11 +53,11 @@ void delete(vector* v,int pos){
 }
 
 void printVector(vector* v){
-    printf("[ ");
+    cout("[ ");
     for(int i=0;i<v->size;++i){
-        printf("%d ",v->data[i]);
+        cout("%d ",v->data[i]);
     }
-    printf("]\n ");
+    cout("]\n ");
 }
 
 int isEmpty(vector* v){
